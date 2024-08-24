@@ -1,0 +1,33 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+*.iml
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Application files
+*.class
+
+# Static and template files (if not needed for source control)
+backend/src/main/resources/static/
+backend/src/main/resources/templates/
+
+# Node modules (if any Node.js project is involved)
+node_modules/
+
+# Generated files
+*.generated
+*.tmp
+*.swp
+*.swo
+
+# Configuration files that might contain sensitive information (adjust as needed)
+application-dev.yml
+application.yml

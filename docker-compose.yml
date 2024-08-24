@@ -1,0 +1,32 @@
+services:
+  postgres:
+    container_name: postgres-sql-pjf
+    image: postgres
+    environment:
+      POSTGRES_USER: pjf-admin
+      POSTGRES_PASSWORD: jackhammer
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: job_finder
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - 5433:5432
+    networks:
+      - spring-pjf
+    restart: unless-stopped
+  mail-dev:
+    container_name: mail-dev-pjf
+    image: maildev/maildev
+    ports:
+      - 1080:1080
+      - 1025:1025
+
+
+networks:
+  spring-pjf:
+    driver: bridge
+
+
+volumes:
+  postgres:
+    driver: local

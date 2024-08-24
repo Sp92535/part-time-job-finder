@@ -29,5 +29,5 @@ node_modules/
 *.swo
 
 # Configuration files that might contain sensitive information (adjust as needed)
-application-dev.yml
-application.yml
+#application-dev.yml
+#application.yml
